@@ -1,10 +1,698 @@
 <!DOCTYPE html>
-<html>
+<!-- 这是HTML5文档类型声明 -->
+<html lang="zh-CN">
+<!-- html是根元素，lang属性指定语言 -->
+
 <head>
+    <!-- head部分包含元数据和文档信息 -->
     <meta charset="UTF-8">
+    <!-- 指定字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 响应式视口设置 -->
+    <meta name="description" content="HTML语法教学文档">
+    <!-- 页面描述 -->
     <title>FrontHead Std</title>
+    <!-- 页面标题，显示在浏览器标签上 -->
+    
+    <!-- 内部CSS样式 -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header, footer, section, article, nav {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            font-family: monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    
+    <!-- 外部CSS链接 -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Welcome to FrontHead Std!</h1>
+    <!-- body包含页面可见内容 -->
+    
+    <!-- 语义化标签 - 页眉 -->
+    <header>
+        <h1>HTML语法教学</h1>
+        <p>本文档展示HTML的重要语法元素</p>
+    </header>
+    
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#text">文本元素</a></li>
+            <li><a href="#lists">列表</a></li>
+            <li><a href="#links">链接</a></li>
+            <li><a href="#images">图像</a></li>
+            <li><a href="#tables">表格</a></li>
+            <li><a href="#forms">表单</a></li>
+            <li><a href="#semantic">语义化元素</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 文本元素部分 -->
+        <section id="text">
+            <h2>文本元素</h2>
+            
+            <article>
+                <h3>标题</h3>
+                <h1>h1标题 (最重要)</h1>
+                <h2>h2标题</h2>
+                <h3>h3标题</h3>
+                <h4>h4标题</h4>
+                <h5>h5标题</h5>
+                <h6>h6标题 (最不重要)</h6>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;h1&gt;一级标题&lt;/h1&gt;<br>
+                        &lt;h2&gt;二级标题&lt;/h2&gt;<br>
+                        &lt;h3&gt;三级标题&lt;/h3&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>段落和文本格式</h3>
+                <p>这是一个段落。HTML中的段落使用&lt;p&gt;标签。</p>
+                <p><strong>这是加粗文本</strong>，<em>这是斜体文本</em>，<u>这是下划线文本</u>，<s>这是删除线文本</s>。</p>
+                <p>这是<sub>下标</sub>和<sup>上标</sup>的例子。</p>
+                <p><small>这是小号文本</small>，<mark>这是高亮文本</mark>。</p>
+                <p><q>这是短引用</q>，<blockquote>这是块引用，通常用于长引用内容。</blockquote></p>
+                <p><code>这是代码片段</code>，<kbd>这是键盘输入</kbd>，<samp>这是程序输出</samp>。</p>
+                <p><abbr title="HyperText Markup Language">HTML</abbr>是缩写示例。</p>
+                <p><time datetime="2023-10-01">2023年10月1日</time>是时间元素。</p>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;p&gt;这是一个段落。&lt;/p&gt;<br>
+                        &lt;strong&gt;加粗文本&lt;/strong&gt;<br>
+                        &lt;em&gt;斜体文本&lt;/em&gt;<br>
+                        &lt;code&gt;代码片段&lt;/code&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>分隔线和换行</h3>
+                <p>这是一行文本。<br>这是使用了&lt;br&gt;标签后的换行。</p>
+                <hr>
+                <p>上面是使用了&lt;hr&gt;标签的水平分隔线。</p>
+            </article>
+        </section>
+        
+        <!-- 列表部分 -->
+        <section id="lists">
+            <h2>列表</h2>
+            
+            <article>
+                <h3>无序列表</h3>
+                <ul>
+                    <li>列表项1</li>
+                    <li>列表项2
+                        <ul>
+                            <li>嵌套列表项1</li>
+                            <li>嵌套列表项2</li>
+                        </ul>
+                    </li>
+                    <li>列表项3</li>
+                </ul>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;列表项1&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;列表项2&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>有序列表</h3>
+                <ol>
+                    <li>第一项</li>
+                    <li>第二项
+                        <ol type="A">
+                            <li>嵌套字母列表项A</li>
+                            <li>嵌套字母列表项B</li>
+                        </ol>
+                    </li>
+                    <li>第三项</li>
+                </ol>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;ol&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;第一项&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;第二项&lt;/li&gt;<br>
+                        &lt;/ol&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>定义列表</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>超文本标记语言</dd>
+                    <dt>CSS</dt>
+                    <dd>层叠样式表</dd>
+                </dl>
+            </article>
+        </section>
+        
+        <!-- 链接部分 -->
+        <section id="links">
+            <h2>链接</h2>
+            
+            <article>
+                <h3>基本链接</h3>
+                <p><a href="https://www.example.com">这是一个外部链接</a></p>
+                <p><a href="#text">这是一个页面内锚点链接(跳转到文本部分)</a></p>
+                <p><a href="mailto:example@example.com">发送邮件链接</a></p>
+                <p><a href="tel:+1234567890">电话链接</a></p>
+                <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">在新标签页打开的链接</a></p>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;a href="https://www.example.com"&gt;示例链接&lt;/a&gt;<br>
+                        &lt;a href="#section-id"&gt;锚点链接&lt;/a&gt;<br>
+                        &lt;a href="mailto:email@example.com"&gt;邮件链接&lt;/a&gt;
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <!-- 图像部分 -->
+        <section id="images">
+            <h2>图像</h2>
+            
+            <article>
+                <h3>基本图像</h3>
+                <img src="https://via.placeholder.com/150" alt="占位图像" width="150" height="150">
+                <p>上面是一个占位图像，使用了src、alt、width和height属性。</p>
+                
+                <h3>带链接的图像</h3>
+                <a href="https://www.example.com">
+                    <img src="https://via.placeholder.com/100" alt="可点击图像">
+                </a>
+                
+                <h3>图像映射</h3>
+                <img src="https://via.placeholder.com/300x150" alt="图像映射示例" usemap="#examplemap">
+                <map name="examplemap">
+                    <area shape="rect" coords="0,0,150,150" href="#text" alt="文本部分">
+                    <area shape="circle" coords="225,75,50" href="#lists" alt="列表部分">
+                </map>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;img src="image.jpg" alt="描述文本" width="200" height="100"&gt;<br>
+                        &lt;figure&gt;<br>
+                        &nbsp;&nbsp;&lt;img src="image.jpg" alt="描述"&gt;<br>
+                        &nbsp;&nbsp;&lt;figcaption&gt;图像标题&lt;/figcaption&gt;<br>
+                        &lt;/figure&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>figure和figcaption</h3>
+                <figure>
+                    <img src="https://via.placeholder.com/400x200" alt="示例图像">
+                    <figcaption>图1. 这是一个图像标题示例</figcaption>
+                </figure>
+            </article>
+        </section>
+        
+        <!-- 表格部分 -->
+        <section id="tables">
+            <h2>表格</h2>
+            
+            <article>
+                <h3>基本表格</h3>
+                <table>
+                    <caption>学生成绩表</caption>
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>语文</th>
+                            <th>数学</th>
+                            <th>英语</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>张三</td>
+                            <td>90</td>
+                            <td>85</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>88</td>
+                            <td>90</td>
+                            <td>87</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>平均分</td>
+                            <td>89</td>
+                            <td>87.5</td>
+                            <td>89.5</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;table&gt;<br>
+                        &nbsp;&nbsp;&lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;表头&lt;/th&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;单元格&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &lt;/table&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>复杂表格</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">姓名</th>
+                            <th colspan="3">成绩</th>
+                        </tr>
+                        <tr>
+                            <th>语文</th>
+                            <th>数学</th>
+                            <th>英语</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>王五</td>
+                            <td>92</td>
+                            <td>88</td>
+                            <td>95</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        
+        <!-- 表单部分 -->
+        <section id="forms">
+            <h2>表单</h2>
+            
+            <article>
+                <h3>基本表单</h3>
+                <form action="/submit" method="post">
+                    <fieldset>
+                        <legend>个人信息</legend>
+                        
+                        <div>
+                            <label for="username">用户名:</label>
+                            <input type="text" id="username" name="username" required placeholder="输入用户名">
+                        </div>
+                        
+                        <div>
+                            <label for="password">密码:</label>
+                            <input type="password" id="password" name="password" required minlength="6">
+                        </div>
+                        
+                        <div>
+                            <label for="email">邮箱:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div>
+                            <label for="age">年龄:</label>
+                            <input type="number" id="age" name="age" min="18" max="100">
+                        </div>
+                        
+                        <div>
+                            <label for="birthday">生日:</label>
+                            <input type="date" id="birthday" name="birthday">
+                        </div>
+                        
+                        <div>
+                            <label for="color">喜欢的颜色:</label>
+                            <input type="color" id="color" name="color" value="#ff0000">
+                        </div>
+                        
+                        <div>
+                            <label for="avatar">上传头像:</label>
+                            <input type="file" id="avatar" name="avatar" accept="image/*">
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>其他信息</legend>
+                        
+                        <div>
+                            <label>性别:</label>
+                            <input type="radio" id="male" name="gender" value="male" checked>
+                            <label for="male">男</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">女</label>
+                        </div>
+                        
+                        <div>
+                            <label>兴趣爱好:</label>
+                            <input type="checkbox" id="sports" name="hobbies" value="sports">
+                            <label for="sports">运动</label>
+                            <input type="checkbox" id="music" name="hobbies" value="music">
+                            <label for="music">音乐</label>
+                            <input type="checkbox" id="reading" name="hobbies" value="reading">
+                            <label for="reading">阅读</label>
+                        </div>
+                        
+                        <div>
+                            <label for="country">国家:</label>
+                            <select id="country" name="country">
+                                <option value="">--请选择--</option>
+                                <option value="china">中国</option>
+                                <option value="usa">美国</option>
+                                <option value="uk">英国</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="city">城市:</label>
+                            <select id="city" name="city" multiple size="3">
+                                <option value="beijing">北京</option>
+                                <option value="shanghai">上海</option>
+                                <option value="guangzhou">广州</option>
+                                <option value="shenzhen">深圳</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="bio">个人简介:</label>
+                            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="介绍一下你自己..."></textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <div>
+                        <button type="submit">提交</button>
+                        <button type="reset">重置</button>
+                        <button type="button" onclick="alert('点击了普通按钮')">普通按钮</button>
+                    </div>
+                </form>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;form action="/submit" method="post"&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="name"&gt;姓名:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+                        &nbsp;&nbsp;&lt;button type="submit"&gt;提交&lt;/button&gt;<br>
+                        &lt;/form&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>HTML5新增表单元素</h3>
+                <form>
+                    <div>
+                        <label for="range">音量:</label>
+                        <input type="range" id="range" name="range" min="0" max="100" step="10" value="50">
+                    </div>
+                    
+                    <div>
+                        <label for="search">搜索:</label>
+                        <input type="search" id="search" name="search" placeholder="输入搜索词">
+                    </div>
+                    
+                    <div>
+                        <label for="url">网址:</label>
+                        <input type="url" id="url" name="url" placeholder="https://example.com">
+                    </div>
+                    
+                    <div>
+                        <label for="phone">电话:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
+                    
+                    <div>
+                        <label for="datalist">浏览器:</label>
+                        <input list="browsers" id="datalist" name="datalist">
+                        <datalist id="browsers">
+                            <option value="Chrome">
+                            <option value="Firefox">
+                            <option value="Safari">
+                            <option value="Edge">
+                            <option value="Opera">
+                        </datalist>
+                    </div>
+                    
+                    <div>
+                        <label for="progress">进度:</label>
+                        <progress id="progress" value="75" max="100">75%</progress>
+                    </div>
+                    
+                    <div>
+                        <label for="meter">存储空间:</label>
+                        <meter id="meter" value="6" min="0" max="10">6 out of 10</meter>
+                    </div>
+                    
+                    <div>
+                        <output name="result" for="a b">0</output>
+                    </div>
+                </form>
+            </article>
+        </section>
+        
+        <!-- 语义化元素部分 -->
+        <section id="semantic">
+            <h2>语义化元素</h2>
+            
+            <article>
+                <h3>HTML5语义化标签</h3>
+                <p>HTML5引入了许多语义化标签，使文档结构更清晰:</p>
+                
+                <ul>
+                    <li><code>&lt;header&gt;</code> - 页眉</li>
+                    <li><code>&lt;footer&gt;</code> - 页脚</li>
+                    <li><code>&lt;nav&gt;</code> - 导航栏</li>
+                    <li><code>&lt;main&gt;</code> - 主要内容</li>
+                    <li><code>&lt;article&gt;</code> - 独立内容</li>
+                    <li><code>&lt;section&gt;</code> - 文档章节</li>
+                    <li><code>&lt;aside&gt;</code> - 侧边栏内容</li>
+                    <li><code>&lt;figure&gt;</code> 和 <code>&lt;figcaption&gt;</code> - 图像和标题</li>
+                    <li><code>&lt;time&gt;</code> - 时间日期</li>
+                    <li><code>&lt;mark&gt;</code> - 高亮文本</li>
+                </ul>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;header&gt;...&lt;/header&gt;<br>
+                        &lt;nav&gt;...&lt;/nav&gt;<br>
+                        &lt;main&gt;<br>
+                        &nbsp;&nbsp;&lt;article&gt;...&lt;/article&gt;<br>
+                        &lt;/main&gt;<br>
+                        &lt;footer&gt;...&lt;/footer&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>语义化布局示例</h3>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <header style="background-color: #f2f2f2; padding: 10px;">
+                        <h4>网站标题</h4>
+                        <nav>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="display: inline; margin-right: 10px;"><a href="#">首页</a></li>
+                                <li style="display: inline; margin-right: 10px;"><a href="#">关于</a></li>
+                                <li style="display: inline;"><a href="#">联系</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    
+                    <main style="display: flex; margin: 10px 0;">
+                        <article style="flex: 3; padding: 10px; background-color: #fff;">
+                            <h4>文章标题</h4>
+                            <p>文章内容...</p>
+                        </article>
+                        
+                        <aside style="flex: 1; padding: 10px; background-color: #f9f9f9;">
+                            <h4>侧边栏</h4>
+                            <p>相关内容...</p>
+                        </aside>
+                    </main>
+                    
+                    <footer style="background-color: #f2f2f2; padding: 10px; text-align: center;">
+                        <p>版权信息 &copy; 2023</p>
+                    </footer>
+                </div>
+            </article>
+        </section>
+        
+        <!-- 多媒体部分 -->
+        <section id="media">
+            <h2>多媒体</h2>
+            
+            <article>
+                <h3>音频</h3>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频元素。
+                </audio>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;audio controls&gt;<br>
+                        &nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+                        &nbsp;&nbsp;您的浏览器不支持音频元素。<br>
+                        &lt;/audio&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>视频</h3>
+                <video width="320" height="240" controls poster="poster.jpg">
+                    <source src="movie.mp4" type="video/mp4">
+                    您的浏览器不支持视频元素。
+                </video>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;video width="320" height="240" controls&gt;<br>
+                        &nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+                        &nbsp;&nbsp;您的浏览器不支持视频元素。<br>
+                        &lt;/video&gt;
+                    </code>
+                </div>
+            </article>
+            
+            <article>
+                <h3>嵌入内容</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                
+                <div class="code-example">
+                    <code>
+                        &lt;iframe src="https://example.com" width="300" height="200"&gt;&lt;/iframe&gt;<br>
+                        &lt;embed src="flash.swf" width="300" height="200"&gt;<br>
+                        &lt;object data="pdf.pdf" width="300" height="200"&gt;&lt;/object&gt;
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <!-- 其他HTML元素 -->
+        <section id="other">
+            <h2>其他HTML元素</h2>
+            
+            <article>
+                <h3>div和span</h3>
+                <div style="background-color: #f0f0f0; padding: 10px;">
+                    <p>div是一个块级容器元素，用于组织和样式化内容。</p>
+                    <p>这是一个<span style="color: red; font-weight: bold;">span元素</span>的例子，它是一个内联容器。</p>
+                </div>
+            </article>
+            
+            <article>
+                <h3>details和summary</h3>
+                <details>
+                    <summary>点击查看详情</summary>
+                    <p>这是一个可折叠的内容区域。点击summary元素可以展开或折叠内容。</p>
+                </details>
+            </article>
+            
+            <article>
+                <h3>模板元素</h3>
+                <template id="productTemplate">
+                    <div class="product">
+                        <h4 class="name"></h4>
+                        <p class="price"></p>
+                    </div>
+                </template>
+                <p>模板内容不会显示在页面上，但可以通过JavaScript使用。</p>
+            </article>
+            
+            <article>
+                <h3>canvas绘图</h3>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+                <script>
+                    const canvas = document.getElementById('myCanvas');
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = 'red';
+                    ctx.fillRect(10, 10, 50, 50);
+                    ctx.fillStyle = 'blue';
+                    ctx.fillRect(70, 10, 50, 50);
+                </script>
+            </article>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2023 HTML语法教学. 保留所有权利.</p>
+        <address>
+            联系我们: <a href="mailto:contact@example.com">contact@example.com</a>
+        </address>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // 内联JavaScript
+        console.log('页面已加载');
+        
+        // 显示当前年份
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.querySelector('footer p');
+            if (yearElement) {
+                const currentYear = new Date().getFullYear();
+                yearElement.textContent = yearElement.textContent.replace('2023', currentYear);
+            }
+        });
+    </script>
+    
+    <!-- 外部JavaScript -->
+    <script src="scripts.js"></script>
+    
+    <!-- 延迟加载的脚本 -->
+    <script defer src="deferred.js"></script>
+    
+    <!-- 异步加载的脚本 -->
+    <script async src="analytics.js"></script>
 </body>
 </html>
